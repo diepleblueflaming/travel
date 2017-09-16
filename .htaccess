@@ -1,0 +1,36 @@
+#tat chuc nang hien thi thu muc
+Options All -Indexes
+#khong cho phep hien thi thu muc
+IndexIgnore *
+
+<Files admin.php>
+order deny,allow
+</Files>
+Options +FollowSymlinks
+RewriteEngine On
+
+#phan api
+RewriteRule ^api/([\w]+)/([\w]+)(/?)$ api/index.php?c=$1&a=$2 [nc,qsa]
+RewriteRule ^api/([\w]+)/([\w]+)/([0-9]+)(/?)$ api/index.php?c=$1&a=$2&id=$3 [nc,qsa]
+
+                    # phan admin
+RewriteRule ^admin/([a-zA-Z]+)/page/([0-9]+)/?$ admin.php?c=$1&a=index&page=$2
+RewriteRule ^admin/([a-zA-Z]+)/([a-zA-Z]+)(/?)$ admin.php?c=$1&a=$2
+RewriteRule ^admin/([a-zA-Z]+)/?$ admin.php?c=$1
+RewriteRule ^admin/$ admin.php?c=homeCtr
+RewriteRule ^admin/([a-zA-Z]+)/([a-zA-Z]+)/([0-9]+)$ admin.php?c=$1&a=$2&id=$3
+
+            # phan ngươi dung
+RewriteRule ^user/([\w]+)(/?)$ index.php?c=userCtr&a=$1
+RewriteRule ^user/([\w]+)/(.+)$ index.php?c=userCtr&a=$1&$2
+RewriteRule ^timkiem/$ index.php?c=newsCtr&a=find
+RewriteRule ^comment/([a-zA-Z]+)(/?)$    index.php?c=commentCtr&a=$1
+RewriteRule ^management/$    index.php?c=newsCtr&a=index
+RewriteRule ^management/page/([0-9]+)/?$    index.php?c=newsCtr&a=index&page=$1
+RewriteRule ^management/([a-zA-Z]+)(/?)$    index.php?c=newsCtr&a=$1
+RewriteRule ^management/([a-zA-Z]+)/([0-9]+)(/?)$    index.php?c=newsCtr&a=$1&id=$3
+RewriteRule ^management/page/([0-9])$ index.php?c=newsCtr&a=index&page=$1
+RewriteRule ^home/([a-zA-Z]+)$ index.php?c=homeCtr&a=$1
+RewriteRule ^library/ckfinder/ckfinder.html$ library/ckfinder/ckfinder.html?type=Images&CKEditor=tmp_content&CKEditorFuncNum=93&langCode=en
+RewriteRule ^([a-zA-Z0-9|-]+)/$ index.php?c=newsCtr&a=category&category=$1
+RewriteRule ^([a-zA-Z|-]+)/([a-zA-Z0-9|-]+).html$ index.php?c=newsCtr&a=detailNews&news=$2

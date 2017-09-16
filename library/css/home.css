@@ -1,0 +1,137 @@
+input[type="button"]{font-size: 20px; padding: 6px 25px;}
+.rows{
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.title{
+    margin-bottom: 0;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -3px;
+    padding: 20px 0;
+    color: #0285bd;
+}
+.main_image{
+    width: 50%;
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 3px;
+}
+
+.effect-lily > img{
+    width: 100%;
+    height: 500px;
+}
+
+.main_image > a{
+    display: block;
+    position: relative;
+    background: none;
+    overflow: hidden;
+}
+#hot_big_content{
+    text-align: justify;
+}
+.main_title{
+
+    text-align: justify;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 29px;
+}
+.main_title > a{
+    text-decoration: none;
+    color: #0164a5;
+}
+
+.description{
+    border-top: solid 1px #e3e4e8;
+    border-bottom: solid 1px #e3e4e8;
+    padding: 10px 0;
+    margin: 14px 0;
+    color: #b0b1b6;
+}
+.hot_content{
+    color: #0164a5;
+    text-align: justify;
+    margin-bottom: 8px;
+}
+
+.detailbutton{
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    height: 37px;
+    padding-top: 7px;
+}
+.hot_small{
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.hot_small_content{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.hot_small_content_pic{
+    width: 100%
+}
+
+.hot_small_content_pic > a >img{
+    width: 100%;
+    height: 195px;
+}
+.main_ct{
+    box-sizing: border-box;
+}
+
+.hot_small_content_pic > a{
+    display: block;
+    position: relative;
+    background: none;
+    overflow: hidden;
+}
+
+.hot_small_content_title{
+    padding: 7px 5px;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: justify;
+    color: #0164a5;
+    text-align:  justify;
+}
+.hot_small_content figcaption h4{
+    font-size: 15px;
+}
+a:hover{text-decoration: none; color: red; cursor: pointer;}
+h4,p,h3{font-family: sans-serif, Arial, Verdana, "Trebuchet MS"}
+
+@media only screen and (max-width: 425px) {
+    #hot_big_content{
+        margin-top: 15px;
+    }
+    .main_title{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .hot_content h4{
+        font-size: 14px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .hot_small{
+        margin-top: 20px;
+    }
+    .hot_small_content {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,7 @@
+Options All -Indexes
+IndexIgnore *
+
+<FilesMatch /.*/>
+Order deny,allow
+deny from All
+</FilesMatch>
